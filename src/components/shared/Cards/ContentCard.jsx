@@ -1,5 +1,6 @@
 'use client'
 import {
+  Badge,
   Button,
   Card,
   CardBody,
@@ -8,14 +9,8 @@ import {
 } from '@material-tailwind/react'
 import Image from 'next/image'
 const ContentCard = ({ contentData }) => {
-  const {
-    adult,
-    original_title,
-
-    vote_average,
-    vote_count,
-    poster_path,
-  } = contentData
+  const { adult, original_title, vote_average, vote_count, poster_path } =
+    contentData
   return (
     <Card className="w-96 h-[540px]">
       <CardBody>
@@ -32,10 +27,17 @@ const ContentCard = ({ contentData }) => {
         >
           {original_title}
         </Typography>
-        <Typography>...</Typography>
+        <Typography>TMDB Rating: {vote_average}</Typography>
+        <Typography>Vote Count: {vote_count}</Typography>
       </CardBody>
       <CardFooter className="pt-0 justify-end flex mt-auto">
-        <Button>Read More</Button>
+        {adult ? (
+          <Badge content="18+">
+            <Button>Read More</Button>
+          </Badge>
+        ) : (
+          <Button>Read More</Button>
+        )}
       </CardFooter>
     </Card>
   )
