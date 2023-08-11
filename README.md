@@ -11,6 +11,7 @@ yarn dev
 # or
 pnpm dev
 ```
+"packageManager": "yarn@3.6.1"
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
