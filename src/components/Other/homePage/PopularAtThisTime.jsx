@@ -2,15 +2,14 @@
 
 import ContentCard from '@/components/shared/Cards/ContentCard'
 
-const ActionOfTheTime = ({ actionList }) => {
-  console.log(actionList)
+const PopularAtTheTime = ({ popularMovies }) => {
   return (
     <section id="actionSection" className="grid gap-3 lg:grid-cols-3">
-      {actionList?.map((item) => (
+      {popularMovies?.map((item) => (
         <ContentCard key={item?.id} contentData={item} />
       ))}
     </section>
   )
 }
 
-export default ActionOfTheTime
+export default PopularAtTheTime

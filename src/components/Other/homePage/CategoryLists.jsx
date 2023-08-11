@@ -10,7 +10,7 @@ const CategoryLists = ({ categoryList }) => {
       </h2>
       <div className="flex gap-3 justify-center flex-wrap">
         {categoryList?.map((item) => (
-          <Link href={`/genre/${item?.id}`} key={item?.id}>
+          <Link href={`/genres/${item?.id}`} key={item?.id}>
             <Button>{item?.name}</Button>
           </Link>
         ))}

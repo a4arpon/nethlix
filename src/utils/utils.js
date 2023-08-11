@@ -7,7 +7,7 @@ const getPopularMedia = async () => {
       }
     )
     const result = await response.json()
-    return result
+    return result?.results || []
   } catch (error) {
     alert('Unknown error occurred.')
     return []
