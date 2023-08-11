@@ -12,7 +12,7 @@ const ContentCard = ({ contentData }) => {
   const { adult, original_title, vote_average, vote_count, poster_path } =
     contentData
   return (
-    <Card className="w-96 h-[540px]">
+    <Card className="w-full h-[560px]">
       <CardBody>
         <Image
           src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${poster_path}`}
@@ -25,7 +25,9 @@ const ContentCard = ({ contentData }) => {
           variant="h5"
           className="mb-2 mt-5 border-t-2 pt-3 font-semibold"
         >
-          {original_title}
+          {original_title.length > 80
+            ? original_title.substring(0, 80) + '...'
+            : original_title}
         </Typography>
         <Typography>TMDB Rating: {vote_average}</Typography>
         <Typography>Vote Count: {vote_count}</Typography>

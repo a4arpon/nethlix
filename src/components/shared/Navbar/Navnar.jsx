@@ -1,25 +1,15 @@
 'use client'
 import { Cog6ToothIcon } from '@heroicons/react/24/solid'
-import {
-  Button,
-  IconButton,
-  Input,
-  Navbar,
-  Typography
-} from '@material-tailwind/react'
+import { Button, IconButton, Input, Navbar } from '@material-tailwind/react'
+import Link from 'next/link'
 
 const NavItem = () => {
   return (
     <Navbar className="mx-auto  px-4 py-3 mt-5">
       <div className="flex flex-wrap items-center justify-between gap-y-4 text-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 ml-2 cursor-pointer py-1.5"
-        >
-          Material Tailwind
-        </Typography>
+        <Link href="/" className="text-3xl font-bold">
+          Nethlix
+        </Link>
         <div className="ml-auto flex gap-1 md:mr-4">
           <IconButton variant="text" color="gray">
             <Cog6ToothIcon className="h-4 w-4" />

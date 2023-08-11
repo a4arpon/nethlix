@@ -1,3 +1,4 @@
+import NavItem from '@/components/shared/Navbar/Navnar'
 import { Roboto } from 'next/font/google'
 import './assets/globals.css'
 
@@ -14,7 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <NavItem />
+        {children}
+      </body>
     </html>
   )
 }
