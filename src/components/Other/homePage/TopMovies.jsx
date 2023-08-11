@@ -1,8 +1,9 @@
 'use client'
 
+import ContentCard from '@/components/shared/Cards/ContentCard'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { Pagination } from 'swiper/modules'
+import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 const TopMovies = ({ topMovies }) => {
@@ -20,29 +21,25 @@ const TopMovies = ({ topMovies }) => {
         breakpoints={{
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
           768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
+            slidesPerView: 3,
+            spaceBetween: 10,
           },
         }}
-        modules={[Pagination]}
-        className="h-[500px] w-full"
+        modules={[Autoplay, Pagination]}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        className="h-[620px] w-full"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {topMovies?.map((item) => (
+          <SwiperSlide key={item?.id}>
+            <ContentCard contentData={item} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   )

@@ -10,7 +10,7 @@ const NavItem = () => {
         <Link href="/" className="text-3xl font-bold">
           Nethlix
         </Link>
-        <div className="ml-auto flex gap-1 md:mr-4">
+        <div className="ml-auto  gap-1 md:mr-4 hidden">
           <IconButton variant="text" color="gray">
             <Cog6ToothIcon className="h-4 w-4" />
           </IconButton>

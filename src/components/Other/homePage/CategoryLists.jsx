@@ -5,7 +5,7 @@ import Link from 'next/link'
 const CategoryLists = ({ categoryList }) => {
   return (
     <section id="moviesCategory" className="">
-      <h2 className="text-xl text-center md:text-2xl lg:text-3xl border-b-2 pb-2 mb-3">
+      <h2 className="text-xl text-center md:text-2xl lg:text-3xl border-b-2 pb-2 mb-3 font-semibold">
         Movie Categories
       </h2>
       <div className="flex gap-3 justify-center flex-wrap">
