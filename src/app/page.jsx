@@ -1,3 +1,4 @@
+import ActionMovies from '@/components/Other/homePage/ActionMovies'
 import CategoryLists from '@/components/Other/homePage/CategoryLists'
 import PopularAtTheTime from '@/components/Other/homePage/PopularAtThisTime'
 import TopMovies from '@/components/Other/homePage/TopMovies'
@@ -18,6 +19,7 @@ const Home = async () => {
       <CategoryLists categoryList={categoryList} />
       <PopularAtTheTime popularMovies={popularMovies} />
       <TopMovies topMovies={topMovies} />
+      <ActionMovies />
     </main>
   )
 }

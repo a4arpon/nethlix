@@ -12,7 +12,7 @@ const ContentCard = ({ contentData }) => {
   const { adult, original_title, vote_average, vote_count, poster_path } =
     contentData
   return (
-    <Card className="w-full h-[560px]">
+    <Card className="w-full h-[560px] shadow-lg shadow-gray-400">
       <CardBody>
         <Image
           src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${poster_path}`}

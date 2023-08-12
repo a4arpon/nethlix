@@ -5,7 +5,6 @@ import { getCategoryMovies } from '@/utils/utils'
 const GenrePage = async ({ params }) => {
   const catID = params?.catID
   const categoryData = await getCategoryMovies(catID)
-  console.log(categoryData)
   return (
     <main className="container flex flex-col gap-10 mt-10 mx-auto p-3 lg:p-0">
       <Slider categoryData={categoryData} />
