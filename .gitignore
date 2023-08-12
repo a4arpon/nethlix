@@ -34,9 +34,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.yarn
-/.yarn
-.yarn/*
-.yarn.lock
-yarn.lock
-.yarnrc.yml
+
+.yarn/cache
+.yarn/install-state.gz
