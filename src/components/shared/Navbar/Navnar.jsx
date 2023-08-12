@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const NavItem = () => {
   return (
-    <Navbar className="mx-auto  px-4 py-3 mt-5">
+    <Navbar className="mx-auto  px-4 py-3 mt-5 border-2 border-gray-700">
       <div className="flex flex-wrap items-center justify-between gap-y-4 text-gray-900">
         <Link href="/" className="text-3xl font-bold">
           Nethlix
@@ -15,7 +15,7 @@ const NavItem = () => {
             <Cog6ToothIcon className="h-4 w-4" />
           </IconButton>
         </div>
-        <div className="relative flex w-full gap-2 md:w-max">
+        <div className="relative flex w-full gap-2 md:w-max invisible">
           <Input
             type="search"
             label="Type here..."

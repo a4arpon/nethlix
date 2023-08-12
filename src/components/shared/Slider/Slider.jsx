@@ -3,7 +3,7 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Autoplay, Pagination } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 const Slider = ({ popularMovies }) => {
   return (
@@ -14,10 +14,7 @@ const Slider = ({ popularMovies }) => {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Autoplay, Pagination]}
+      modules={[Autoplay]}
       className="w-full"
     >
       {popularMovies?.map((item) => (
@@ -25,7 +22,7 @@ const Slider = ({ popularMovies }) => {
           <div
             style={{
               backgroundImage: `url(
-                https://image.tmdb.org/t/p/w600_and_h900_bestv2${item?.poster_path}
+                https://image.tmdb.org/t/p/original${item?.poster_path}
               )`,
               backgroundPosition: 'center',
             }}
