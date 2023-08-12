@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-white p-8 container mx-auto">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
-        <img src="/img/logo-ct-dark.png" alt="logo-ct" className="w-10" />
+        <img src="https://seeklogo.com/images/N/netflix-secondary-api-logo-FE476C354A-seeklogo.com.png" alt="logo-ct" className="w-20 h-20 rounded-full" />
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
             <Typography

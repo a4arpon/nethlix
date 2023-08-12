@@ -8,14 +8,15 @@ import {
   Typography
 } from '@material-tailwind/react'
 import Image from 'next/image'
+import Link from 'next/link'
 const ContentCard = ({ contentData }) => {
-  const { adult, original_title, vote_average, vote_count, poster_path } =
+  const { adult, original_title, vote_average, vote_count, poster_path, id } =
     contentData
   return (
     <Card className="w-full h-[560px] shadow-lg shadow-gray-400">
       <CardBody>
         <Image
-          src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${poster_path}`}
+          src={`https://image.tmdb.org/t/p/original${poster_path}`}
           alt="card-image"
           width="500"
           height="800"
@@ -34,11 +35,15 @@ const ContentCard = ({ contentData }) => {
       </CardBody>
       <CardFooter className="pt-0 justify-end flex mt-auto">
         {adult ? (
-          <Badge content="18+">
-            <Button>Read More</Button>
-          </Badge>
+          <Link href={'/media/' + id}>
+            <Badge content="18+">
+              <Button>Read More</Button>
+            </Badge>
+          </Link>
         ) : (
-          <Button>Read More</Button>
+          <Link href={'/media/' + id}>
+            <Button>Read More</Button>
+          </Link>
         )}
       </CardFooter>
     </Card>
